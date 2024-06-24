@@ -1,0 +1,60 @@
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Intersection Observer for section animations
+const sections = document.querySelectorAll('section');
+const options = {
+    threshold: 0.3
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+        }
+    });
+}, options);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+// Typing effect for header logo
+const logoText = "Ahmed Nami";
+let i = 0;
+let speed = 100;
+
+function typeWriter() {
+    if (i < logoText.length) {
+        document.querySelector('.logo').innerHTML += logoText.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', typeWriter);
+
+// Parallax scrolling effect
+window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('header');
+    let scrollPosition = window.pageYOffset;
+    parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+});
+
+// Color change on scroll
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
