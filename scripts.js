@@ -1,83 +1,31 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Typing Script JS
+var typed = new Typed(".typing", {
+    strings: ["Frontend Developer"], // Words to type
+    typeSpeed: 100, // Typing speed in milliseconds
+    backSpeed: 60, // Backspacing speed in milliseconds
+    loop: true // Whether to loop through the words
 });
 
-// Intersection Observer for section animations
-const sections = document.querySelectorAll('section');
-const options = {
-    threshold: 0.1
+// Show/hide nav menu
+const menu = document.querySelector('.nav_menu');
+const menuBtn = document.querySelector('#open-menu-btn');
+const closeBtn = document.querySelector('#close-menu-btn');
+
+menuBtn.addEventListener('click', () => {
+    menu.style.display = "flex";
+    closeBtn.style.display = "inline-block";
+    menuBtn.style.display = "none";
+});
+
+// Close nav menu
+const closeNav = () => {
+    menu.style.display = "none";
+    closeBtn.style.display = "none";
+    menuBtn.style.display = "inline-block";
 };
+closeBtn.addEventListener('click', closeNav);
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-        }
-    });
-}, options);
-
-sections.forEach(section => {
-    observer.observe(section);
-});
-
-// Typing effect for header logo
-const logoText = "Ahmed Nami";
-let i = 0;
-let speed = 100;
-
-function typeWriter() {
-    if (i < logoText.length) {
-        document.querySelector('.logo').innerHTML += logoText.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', typeWriter);
-
-// Toggle navigation menu on small screens
-const navToggle = document.createElement('div');
-navToggle.classList.add('nav-toggle');
-navToggle.innerHTML = '<i class="fas fa-bars"></i>';
-document.querySelector('nav').appendChild(navToggle);
-
-navToggle.addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('show');
-});
-
-// Color change on scroll
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-});
-
-// Image Lazy Loading
-document.addEventListener("DOMContentLoaded", function() {
-    const lazyImages = document.querySelectorAll("img");
-
-    const imageObserver = new IntersectionObserver((entries, imageObserver) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const lazyImage = entry.target;
-                lazyImage.src = lazyImage.dataset.src;
-                lazyImage.classList.remove("lazy");
-                imageObserver.unobserve(lazyImage);
-            }
-        });
-    });
-
-    lazyImages.forEach(image => {
-        imageObserver.observe(image);
-    });
+// Nav color change on scroll
+window.addEventListener('scroll', () => {
+    document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 100);
 });

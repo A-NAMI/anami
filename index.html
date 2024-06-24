@@ -1,48 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Nami's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Nami | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header id="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">Ahmed Nami</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="nav-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo">Ahmed <span>Nami</span></div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section id="hero" class="full-height">
-        <div class="container">
-            <h1>Welcome to My Portfolio</h1>
-            <p>I'm Ahmed Nami, a Software Engineering Student at McGill University</p>
-            <div class="hero-image">
-                <!-- Insert hero image here -->
-                <img src="path/to/your/hero-image.jpg" alt="Hero Image">
-            </div>
+  <!-- Hero Section -->
+  <section class="hero_container">
+    <div class="content">
+      <p class="subtitle">HELLO, I AM</p>
+      <h1 class="text2">Ahmed Nami</h1>
+      <h3 class="text3">I'm a <span class="typing"></span></h3>
+      <p class="description">
+        Welcome to my website. I am a motivated individual with a passion for programming, Machine Learning, and Embedded Systems.
+      </p>
+      <div class="hire_btn"><button onclick="location.href = 'https://github.com/A-NAMI';">My CV</button></div>
+    </div>
+    <div class="image">
+      <img class="gradient-border" src="images/pfp.png" alt="profile">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about_container">
+      <div class="about_left">
+        <img src="images/about.png" alt="profile" />
+      </div>
+      <div class="about_right">
+        <h1 class="title">About <span>Me</span></h1>
+        <p class="description">
+          <span>» </span>Currently pursuing a <span>Bachelor's in Honours Electrical Engineering</span> with a Minor in Software Engineering at <span>McGill University</span>
+          <br /><br />
+          <span>» </span>Passionate about programming, with experience in <span>Python, Java, JavaScript, C,</span> and more.
+          <br /><br />
+          <span>» </span>Skilled in <span>Machine Learning</span> and <span>Embedded Systems</span>, with hands-on experience in <span>PyTorch, TensorFlow,</span> and <span>Keras</span>.
+          <br /><br />
+          <span>» </span>Strong foundation in web development, including <span>HTML, CSS, and JavaScript</span>, and backend technologies like <span>Django</span> and <span>SQL</span>.
+          <br /><br />
+          <span>» </span>Enthusiastic about continuous learning and exploring new technologies to solve real-world problems.
+          <br /><br />
+          <span>» </span>Experienced in leading projects, including developing specialized <span>PCBs</span> and simulation software for aviation systems.
+          <br /><br />
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="skills_section">
+      <h2 class="section_title">My <span>Skills</span></h2>
+      <div class="skills_container">
+        <div class="skill_card">
+          <h3 class="title">Programming Languages</h3>
+          <div class="skill_icons">
+            <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" title="Python" />
+            <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" title="Java" />
+            <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" title="JavaScript" />
+            <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C" title="C" />
+            <img src="https://img.icons8.com/color/48/000000/assembly.png" alt="ARM Assembly" title="ARM Assembly" />
+            <img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL" title="SQL" />
+            <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" title="MongoDB" />
+            <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" title="HTML" />
+            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" title="CSS" />
+          </div>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Ahmed Nami</p>
+        <div class="skill_card">
+          <h3 class="title">Technologies</h3>
+          <div class="skill_icons">
+            <img src="https://img.icons8.com/color/48/000000/linux.png" alt="Linux" title="Linux" />
+            <img src="https://img.icons8.com/color/48/000000/unix.png" alt="Unix" title="Unix" />
+            <img src="https://img.icons8.com/color/48/000000/console.png" alt="Bash" title="Bash" />
+            <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" title="Git" />
+            <img src="https://img.icons8.com/color/48/000000/pytorch.png" alt="PyTorch" title="PyTorch" />
+            <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" title="TensorFlow" />
+            <img src="https://img.icons8.com/color/48/000000/keras.png" alt="Keras" title="Keras" />
+            <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" title="Django" />
+          </div>
         </div>
-    </footer>
+        <div class="skill_card">
+          <h3 class="title">Spoken Languages</h3>
+          <div class="skill_icons">
+            <img src="https://img.icons8.com/color/48/000000/usa.png" alt="English" title="English" />
+            <img src="https://img.icons8.com/color/48/000000/france.png" alt="French" title="French" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="scripts.js"></script>
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="experience_section">
+      <h2 class="section_title">Work <span>Experience</span></h2>
+      <div class="experience_container">
+        <div class="experience_card">
+          <h3 class="title">Aircraft System Software Specialist Intern</h3>
+          <p>CAE Inc. | May 2024 - Present</p>
+          <ul>
+            <li>Develop and integrate simulation software for aviation systems, within an Agile software engineering team.</li>
+            <li>Design and program onboard system simulations using C, C++, JAVA, focusing on enhancing system performance.</li>
+            <li>Implement and optimize aerodynamic models, engine performance simulations, and flight control algorithms.</li>
+          </ul>
+        </div>
+        <div class="experience_card">
+          <h3 class="title">Research Intern</h3>
+          <p>Computer Networks Research Lab | Aug 2023 - Dec 2023</p>
+          <ul>
+            <li>Participated in research on dynamic neural networks focusing on early exit behavior.</li>
+            <li>Conducted experiments on Dynamic Neural Networks for the T2T-ViT-7 and T2T-ViT-14.</li>
+            <li>Compiled findings in a report contributing to a research paper on DyNN in vision transformers.</li>
+          </ul>
+        </div>
+        <div class="experience_card">
+          <h3 class="title">Electronics Project Lead</h3>
+          <p>Payload Subteam, McGill Rocket Team | Aug 2023 - Present</p>
+          <ul>
+            <li>Led a team to design a specialized PCB integrating STM microcontrollers, optimizing for space efficiency and functionality.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects_section">
+      <h2 class="section_title">My <span>Projects</span></h2>
+      <div class="projects_gallery">
+        <div class="project_card">
+          <img src="images/project1.jpg" alt="Project 1">
+          <div class="project_info">
+            <h3>Deep Learning Model for Fantasy Hockey Performance Prediction</h3>
+            <p>Python, PyTorch, LSTM</p>
+            <button onclick="location.href='https://github.com/RandumbRobot/hockey-player-stats-predictor';">View Project</button>
+          </div>
+        </div>
+        <div class="project_card">
+          <img src="images/project2.jpg" alt="Project 2">
+          <div class="project_info">
+            <h3>NutriPapi: Diet Management Web App</h3>
+            <p>Full Stack Development, Django, React.js, SQL</p>
+            <button onclick="location.href='https://github.com/shyamdesai03/NutriPapi';">View Project</button>
+          </div>
+        </div>
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact_section">
+      <h2 class="section_title">Contact <span>Me</span></h2>
+      <div class="form-container">
+        <form class="form" action="https://formsubmit.co/ahmed.nami@mail.mcgill.ca" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer_container">
+      <div class="footer_section">
+        <h4>Ahmed Nami</h4>
+        <p><i class="fas fa-envelope"></i> ahmed.nami@mail.mcgill.ca</p>
+      </div>
+      <div class="footer_section">
+        <h4>Social</h4>
+        <ul class="footer_social">
+          <li><a href="https://www.linkedin.com/in/ahmed-nami/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/A-NAMI" target="_blank"><i class="fab fa-github"></i></a></li>
+          <!-- Add more social links as needed -->
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
