@@ -61,3 +61,23 @@ window.addEventListener('scroll', function() {
         nav.classList.remove('scrolled');
     }
 });
+
+// Image Lazy Loading
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll("img");
+
+    const imageObserver = new IntersectionObserver((entries, imageObserver) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                lazyImage.classList.remove("lazy");
+                imageObserver.unobserve(lazyImage);
+            }
+        });
+    });
+
+    lazyImages.forEach(image => {
+        imageObserver.observe(image);
+    });
+});
