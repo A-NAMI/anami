@@ -11,7 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Intersection Observer for section animations
 const sections = document.querySelectorAll('section');
 const options = {
-    threshold: 0.3
+    threshold: 0.1
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -42,11 +42,14 @@ function typeWriter() {
 
 document.addEventListener('DOMContentLoaded', typeWriter);
 
-// Parallax scrolling effect
-window.addEventListener('scroll', function() {
-    const parallax = document.querySelector('header');
-    let scrollPosition = window.pageYOffset;
-    parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+// Toggle navigation menu on small screens
+const navToggle = document.createElement('div');
+navToggle.classList.add('nav-toggle');
+navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+document.querySelector('nav').appendChild(navToggle);
+
+navToggle.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('show');
 });
 
 // Color change on scroll
