@@ -1,224 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahmed Nami | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>Ahmed Nami — Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="logo">Ahmed <span>Nami</span></div>
-    <input type="checkbox" id="click">
-    <label for="click" class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </label>
-    <ul>
-      <li><a class="active" href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <div class="logo">AN</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#thesis">Thesis</a></li>
+        <li><a href="#projects-skills">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero_container">
-    <div class="content">
-      <p class="subtitle">HELLO, I AM</p>
-      <h1 class="text2">Ahmed Nami</h1>
-      <h3 class="text3">I'm a <span class="typing"></span></h3>
-      <p class="description">
-        Welcome to my website. I am a motivated individual with a passion for programming, Machine Learning, and Embedded Systems.
-      </p>
-      <div class="hire_btn"><button onclick="location.href = 'https://github.com/A-NAMI';">My CV</button></div>
-    </div>
-    <div class="image">
-      <img class="gradient-border" src="images/pfp.png" alt="profile">
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="about_container">
-      <div class="about_left">
-        <img src="images/about.png" alt="profile" />
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="text-center">
+      <div class="container">
+        <h1 id="hero-title"></h1>
+        <p id="hero-subtitle" class="subtitle">EE &amp; Software Engineer | ML Researcher</p>
+        <button class="btn mt-1" onclick="window.open('Ahmed_Nami_Resume.pdf','_blank')">Download Résumé</button>
       </div>
-      <div class="about_right">
-        <h1 class="title">About <span>Me</span></h1>
-        <p class="description">
-          <span>» </span>Currently pursuing a <span>Bachelor's in Honours Electrical Engineering</span> with a Minor in Software Engineering at <span>McGill University</span>
-          <br /><br />
-          <span>» </span>Passionate about programming, with experience in <span>Python, Java, JavaScript, C,</span> and more.
-          <br /><br />
-          <span>» </span>Skilled in <span>Machine Learning</span> and <span>Embedded Systems</span>, with hands-on experience in <span>PyTorch, TensorFlow,</span> and <span>Keras</span>.
-          <br /><br />
-          <span>» </span>Strong foundation in web development, including <span>HTML, CSS, and JavaScript</span>, and backend technologies like <span>Django</span> and <span>SQL</span>.
-          <br /><br />
-          <span>» </span>Enthusiastic about continuous learning and exploring new technologies to solve real-world problems.
-          <br /><br />
-          <span>» </span>Experienced in leading projects, including developing specialized <span>PCBs</span> and simulation software for aviation systems.
-          <br /><br />
+    </section>
+    
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <div class="container card">
+        <div class="about-content">
+          <img src="portrait.jpg" alt="Ahmed Nami Portrait">
+          <div>
+            <h2>About Me</h2>
+            <p>
+              A motivated individual with in-depth knowledge of programming, machine learning, 
+              and embedded systems. Passionate about problem solving, leadership, and continuous learning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- EDUCATION SECTION -->
+    <section id="education">
+      <div class="container card">
+        <h2 class="text-center mb-2">Education</h2>
+        <h3>McGill University — BEng (Honours) Electrical Engineering</h3>
+        <p><em>Montreal, QC | Sep 2020 — Present (Expected Winter 2025)</em></p>
+        <p>Relevant Coursework: Applied Machine Learning, Deep Learning, Object Oriented Programming, Embedded Systems, Microprocessors, Model-Based Programming, Computer Organization, Electronics.</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="text-center mb-2">Professional Experience</h2>
+        <div class="timeline">
+          <!-- Card 1 -->
+          <div class="card" data-front-content="<h3>Aircraft System Software Intern</h3><p>CAE Inc. | May 2024 – Dec 2024</p>" data-back-content="<ul><li>Developed and integrated simulation software for aviation systems within an Agile team.</li><li>Programmed aircraft system simulations using C, C++, and Java to optimize performance.</li><li>Implemented flight control algorithms with OOP and UML design principles.</li></ul>">
+            <div class="inner">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card" data-front-content="<h3>Research Intern – Machine Learning</h3><p>McGill CNR Lab | Aug 2023 – Dec 2023</p>" data-back-content="<ul><li>Contributed to dynamic neural network (DyNN) research on T2T vision transformers.</li><li>Conducted experiments on T2T-ViT-7/14 and compiled a comprehensive report for publication.</li></ul>">
+            <div class="inner">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card" data-front-content="<h3>Electronics Project Lead</h3><p>McGill Rocket Team | Aug 2023 – Present</p>" data-back-content="<ul><li>Led a team designing specialized PCBs integrating STM microcontrollers.</li><li>Mentored six recruits, enhancing team workflow and securing 2nd place at Launch Canada 2023.</li></ul>">
+            <div class="inner">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- THESIS SECTION -->
+    <section id="thesis">
+      <div class="container card thesis-card">
+        <h2 class="text-center mb-2">Honours Thesis</h2>
+        <h3>Machine Learning for Optimizing Causal Graphs</h3>
+        <p>
+          Refined the GRouNdGAN model to simulate biological perturbations in scRNA-seq data, 
+          integrated diverse datasets, and automated preprocessing pipelines for scalable HPC runs.
+        </p>
+        <p class="mt-1">
+          <a href="#" id="open-thesis-modal">Read More</a>
         </p>
       </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="skills_section">
-      <h2 class="section_title">My <span>Skills</span></h2>
-      <div class="skills_container">
-        <div class="skill_card">
-          <h3 class="title">Programming Languages</h3>
-          <div class="skill_icons">
-            <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" title="Python" />
-            <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" title="Java" />
-            <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" title="JavaScript" />
-            <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C" title="C" />
-            <img src="https://img.icons8.com/color/48/000000/assembly.png" alt="ARM Assembly" title="ARM Assembly" />
-            <img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL" title="SQL" />
-            <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" title="MongoDB" />
-            <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" title="HTML" />
-            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" title="CSS" />
+      <!-- Modal -->
+      <div id="thesis-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Honours Thesis Details</h2>
+          <p>
+            • Customized GRouNdGAN to model drug-response networks<br>
+            • Achieved a 15% improvement in predictive accuracy on held-out test sets<br>
+            • Presented findings in a poster session at McGill University
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- PROJECTS & SKILLS SECTION -->
+    <section id="projects-skills">
+      <div class="container projects-skills-container">
+        <div class="projects">
+          <h2 class="text-center mb-2">Projects</h2>
+          <div class="project-list">
+            <div class="project-card">
+              <h3>Fantasy Hockey Predictor</h3>
+              <p class="tech">Python · PyTorch · LSTM</p>
+              <a href="https://github.com/RandumbRobot/hockey-player-stats-predictor" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+              <h3>NutriPapi: Diet Management</h3>
+              <p class="tech">Django · React.js · SQL</p>
+              <a href="https://github.com/shyamdesai03/NutriPapi" target="_blank">View on GitHub</a>
+            </div>
           </div>
         </div>
-        <div class="skill_card">
-          <h3 class="title">Technologies</h3>
-          <div class="skill_icons">
-            <img src="https://img.icons8.com/color/48/000000/linux.png" alt="Linux" title="Linux" />
-            <img src="https://img.icons8.com/color/48/000000/unix.png" alt="Unix" title="Unix" />
-            <img src="https://img.icons8.com/color/48/000000/console.png" alt="Bash" title="Bash" />
-            <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" title="Git" />
-            <img src="https://img.icons8.com/color/48/000000/pytorch.png" alt="PyTorch" title="PyTorch" />
-            <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" title="TensorFlow" />
-            <img src="https://img.icons8.com/color/48/000000/keras.png" alt="Keras" title="Keras" />
-            <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" title="Django" />
+        <div class="skills">
+          <h2 class="text-center mb-2">Skills</h2>
+          <div class="skill-bar" data-skill="Python" data-level="90">
+            <span class="skill-name">Python</span>
+            <div class="bar"><div class="fill"></div></div>
           </div>
-        </div>
-        <div class="skill_card">
-          <h3 class="title">Spoken Languages</h3>
-          <div class="skill_icons">
-            <img src="https://img.icons8.com/color/48/000000/usa.png" alt="English" title="English" />
-            <img src="https://img.icons8.com/color/48/000000/france.png" alt="French" title="French" />
+          <div class="skill-bar" data-skill="JavaScript" data-level="85">
+            <span class="skill-name">JavaScript</span>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill-bar" data-skill="C/C++" data-level="80">
+            <span class="skill-name">C/C++</span>
+            <div class="bar"><div class="fill"></div></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <div class="experience_section">
-      <h2 class="section_title">Work <span>Experience</span></h2>
-      <div class="experience_container">
-        <div class="experience_card">
-          <h3 class="title">Aircraft System Software Specialist Intern</h3>
-          <p>CAE Inc. | May 2024 - Present</p>
-          <ul>
-            <li>Develop and integrate simulation software for aviation systems, within an Agile software engineering team.</li>
-            <li>Design and program onboard system simulations using C, C++, JAVA, focusing on enhancing system performance.</li>
-            <li>Implement and optimize aerodynamic models, engine performance simulations, and flight control algorithms.</li>
-          </ul>
-        </div>
-        <div class="experience_card">
-          <h3 class="title">Research Intern</h3>
-          <p>Computer Networks Research Lab | Aug 2023 - Dec 2023</p>
-          <ul>
-            <li>Participated in research on dynamic neural networks focusing on early exit behavior.</li>
-            <li>Conducted experiments on Dynamic Neural Networks for the T2T-ViT-7 and T2T-ViT-14.</li>
-            <li>Compiled findings in a report contributing to a research paper on DyNN in vision transformers.</li>
-          </ul>
-        </div>
-        <div class="experience_card">
-          <h3 class="title">Electronics Project Lead</h3>
-          <p>Payload Subteam, McGill Rocket Team | Aug 2023 - Present</p>
-          <ul>
-            <li>Led a team to design a specialized PCB integrating STM microcontrollers, optimizing for space efficiency and functionality.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects_section">
-      <h2 class="section_title">My <span>Projects</span></h2>
-      <div class="projects_gallery">
-        <div class="project_card">
-          <img src="images/project1.jpg" alt="Project 1">
-          <div class="project_info">
-            <h3>Deep Learning Model for Fantasy Hockey Performance Prediction</h3>
-            <p>Python, PyTorch, LSTM</p>
-            <button onclick="location.href='https://github.com/RandumbRobot/hockey-player-stats-predictor';">View Project</button>
-          </div>
-        </div>
-        <div class="project_card">
-          <img src="images/project2.jpg" alt="Project 2">
-          <div class="project_info">
-            <h3>NutriPapi: Diet Management Web App</h3>
-            <p>Full Stack Development, Django, React.js, SQL</p>
-            <button onclick="location.href='https://github.com/shyamdesai03/NutriPapi';">View Project</button>
-          </div>
-        </div>
-        <!-- Add more projects as needed -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact_section">
-      <h2 class="section_title">Contact <span>Me</span></h2>
-      <div class="form-container">
-        <form class="form" action="https://formsubmit.co/ahmed.nami@mail.mcgill.ca" method="POST">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit">Submit</button>
+    </section>
+    
+    <!-- CONTACT & FOOTER -->
+    <section id="contact">
+      <div class="container card contact-card">
+        <h2 class="text-center mb-2">Get in Touch</h2>
+        <form action="mailto:ahmed.nami@mail.mcgill.ca" method="POST" enctype="text/plain">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn mt-1">Send Message</button>
         </form>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer_container">
-      <div class="footer_section">
-        <h4>Ahmed Nami</h4>
-        <p><i class="fas fa-envelope"></i> ahmed.nami@mail.mcgill.ca</p>
+    </section>
+    
+    <footer class="text-center mt-1">
+      <div class="social-links">
+        <a href="https://linkedin.com/in/ahmed-nami" target="_blank" aria-label="LinkedIn">
+          <!-- Insert LinkedIn SVG here -->
+        </a>
+        <a href="https://github.com/A-NAMI" target="_blank" aria-label="GitHub">
+          <!-- Insert GitHub SVG here -->
+        </a>
       </div>
-      <div class="footer_section">
-        <h4>Social</h4>
-        <ul class="footer_social">
-          <li><a href="https://www.linkedin.com/in/ahmed-nami/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="https://github.com/A-NAMI" target="_blank"><i class="fab fa-github"></i></a></li>
-          <!-- Add more social links as needed -->
-        </ul>
-      </div>
-    </div>
-  </footer>
+      <p class="mt-1">© 2025 Ahmed Nami</p>
+    </footer>
+  </main>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <!-- Main Script -->
+  <script src="script.js"></script>
 </body>
-
 </html>
